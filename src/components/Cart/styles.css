@@ -1,0 +1,46 @@
+.Cart > label {
+  cursor: pointer;
+  position: fixed;
+  left: 12px;
+  top: 12px;
+}
+.Cart > label > svg{
+  height: 100%;
+  background-color: #405b8f;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  padding: 8px;
+  transition: 0.2s background;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.Cart > label > svg:hover{
+  background-color: #2a467a;
+}
+.Cart > input {
+  display: none;
+}
+.Cart > aside{
+  display: none;
+  position: fixed;
+  background: #242424;
+  width: 30vw;
+  height: 100vh;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  z-index: 1000;
+  right: 0;
+  top: 0;
+}
+.Cart > input:checked ~ aside{
+  display: block;
+}
+.Cart > aside > ul {
+  list-style: none;
+  padding: 12px;
+}
+.Cart > aside > ul > li:not(li:last-child){
+  border: 1px solid rgba(255, 255, 255, 0.6)
+}
+.Cart > aside > ul > li > img {
+  width: 100%;
+}

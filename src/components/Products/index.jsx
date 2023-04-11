@@ -1,5 +1,5 @@
 import './styles.css'
-import Cart from '../../assets/Cart'
+import Cart from '../../assets/CartIcon'
 
 export function Products ({ products }) {
   return (

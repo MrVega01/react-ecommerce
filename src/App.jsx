@@ -1,19 +1,20 @@
-import { useState } from 'react'
 import './App.css'
 import { Products } from './components/Products'
 import Filters from './components/Filters'
 import productsResponse from './mocks/products.json'
 import { useFilters } from './hooks/useFilters'
+import Cart from './components/Cart'
 
 function App () {
-  const [products, setProducts] = useState(productsResponse.products)
-  const { setFilters, filterProducts } = useFilters()
+  const { filterProducts, updateFilters } = useFilters()
 
-  const filteredProducts = filterProducts(products)
+  const filteredProducts = filterProducts(productsResponse.products)
+
   return (
     <div className='App'>
       <h1>Shopping card</h1>
-      <Filters />
+      <Cart />
+      <Filters updateFilters={updateFilters} />
       <Products products={filteredProducts} />
     </div>
   )
