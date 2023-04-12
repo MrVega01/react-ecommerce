@@ -23,7 +23,7 @@
 .Products ul > li > h3{
   margin: 2px 0;
 }
-.Products ul > li > button{
+.Products ul li button{
   background-color: #242424;
   border: solid 1px rgb(255, 255, 255, 0.1);
   padding: 4px 12px;
@@ -34,4 +34,10 @@
 }
 .Products ul > li > button:hover{
   background: #000;
+}
+.Products .removeButton{
+  background: rgb(143, 0, 0);
+}
+.Products .removeButton:hover{
+  background: rgb(107, 0, 0);
 }
