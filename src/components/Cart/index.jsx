@@ -24,15 +24,21 @@ export default function Cart () {
               <li key={product.id}>
                 <img src={product.thumbnail} alt={product.title} />
                 <footer>
-                  <h4>{product.title} - {product.price}</h4>
-                  <span>Quantity: {product.quantity}</span>
+                  <div>
+                    <h4>{product.title} - ${product.price}</h4>
+                    <span>Quantity: {product.quantity}</span>
+                  </div>
                   <button onClick={() => handlerClickAddToCart(product)}><AddCart /></button>
                 </footer>
               </li>
             ))
           }
         </ul>
-        <button onClick={clearCart}><ClearCart /></button>
+        {
+          cart.length
+            ? <button onClick={clearCart}><ClearCart /></button>
+            : <span>Cart empty</span>
+        }
       </aside>
     </section>
   )

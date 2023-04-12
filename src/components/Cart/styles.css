@@ -39,8 +39,8 @@
   border-radius: 4px;
   transition: background 0.2;
 }
-.removeButton{
-  background: rgb(107, 0, 0);
+.Cart > aside > button {
+  margin-bottom: 12px;
 }
 .Cart > aside button:hover {
   background: #1b1b1b;
@@ -53,9 +53,10 @@
 }
 .Cart > aside > ul {
   list-style: none;
-  padding: 12px 24px;
+  padding: 0 24px;
 }
 .Cart > aside > ul > li {
+  padding: 12px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1)
 }
 .Cart > aside > ul > li > img {
@@ -63,10 +64,20 @@
   border-radius: 6px;
 }
 .Cart > aside > ul > li > footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.Cart > aside > ul > li > footer > div {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 6px 0;
+}
+.Cart > aside > ul > li > footer > div > h4 {
+  margin: 0;
+}
+.Cart > aside > ul > li > footer > button {
+  margin: auto;
 }
