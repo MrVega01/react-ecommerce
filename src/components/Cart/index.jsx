@@ -1,18 +1,19 @@
 import './styles.css'
 import { useId } from 'react'
-// Asetts
 import useCart from '../../hooks/useCart'
+// Asetts
 import ClearCart from '../../assets/ClearCart'
 import CartIcon from '../../assets/CartIcon'
 import AddCart from '../../assets/AddCart'
+import RemoveCart from '../../assets/RemoveCart'
 
 export default function Cart () {
   const checkboxId = useId()
-  const { cart, addToCart, clearCart } = useCart()
+  const { cart, addToCart, decreaseToCart, clearCart } = useCart()
 
-  const handlerClickAddToCart = (product) => {
-    addToCart(product)
-  }
+  const handlerClickAddToCart = (product) => addToCart(product)
+  const handlerClickDecreaseToCart = (product) => decreaseToCart(product)
+
   return (
     <section className='Cart'>
       <label htmlFor={checkboxId}><CartIcon /></label>
@@ -28,7 +29,10 @@ export default function Cart () {
                     <h4>{product.title} - ${product.price}</h4>
                     <span>Quantity: {product.quantity}</span>
                   </div>
-                  <button onClick={() => handlerClickAddToCart(product)}><AddCart /></button>
+                  <div>
+                    <button onClick={() => handlerClickDecreaseToCart(product)}><RemoveCart /></button>
+                    <button onClick={() => handlerClickAddToCart(product)}><AddCart /></button>
+                  </div>
                 </footer>
               </li>
             ))

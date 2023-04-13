@@ -12,12 +12,17 @@ export function useCartReducer () {
     type: 'REMOVE_TO_CART',
     payload: product
   })
+  const decreaseToCart = (product) => dispatch({
+    type: 'DECREASE_TO_CART',
+    payload: product
+  })
   const clearCart = () => dispatch({ type: 'CLEAR_CART' })
 
   return {
     cart: state,
     addToCart,
     removeToCart,
+    decreaseToCart,
     clearCart
   }
 }

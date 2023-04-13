@@ -66,17 +66,22 @@
 .Cart > aside > ul > li > footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
-.Cart > aside > ul > li > footer > div {
+.Cart > aside > ul > li > footer > div:first-child {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.Cart > aside > ul > li > footer > div > h4 {
+.Cart > aside > ul > li > footer > div:first-child > h4 {
   margin: 0;
+}
+.Cart > aside > ul > li > footer > div:last-child{
+  display: flex;
+  gap: 12px;
 }
 .Cart > aside > ul > li > footer > button {
   margin: auto;
